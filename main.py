@@ -73,23 +73,7 @@ def predict_image_class(model, image):
 st.title("🌱 Plant Disease Classifier")
 
 # Load Model Here (Avoids Missing ScriptRunContext Issue)
-model = load_model()
-
-uploaded_image = st.file_uploader("📸 Upload an image...", type=["jpg", "jpeg", "png"])
-
-if uploaded_image:
-    image = Image.open(uploaded_image)
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        resized_img = image.resize((150, 150))
-        st.image(resized_img, caption="Uploaded Image")
-
-    with col2:
-        if st.button("🔍 Classify"):
-            prediction = predict_image_class(model, uploaded_image)
-            st.success(f"Prediction: {prediction}")
+https://drive.google.com/file/d/1E4-LXchopuKMMRFMgcDLvrqHIPywZTfu/view?usp=sharing
 
 
 import os
